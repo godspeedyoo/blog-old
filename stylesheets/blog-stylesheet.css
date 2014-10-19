@@ -1,80 +1,112 @@
 html {
-  color: black;
-  background-color: gray;
+  background-color: lightgray;
 }
 
-header {
-  text-align: center;
-  padding: 2px;
-  color: black;
-  font-size: 60px;
-  background-color: white;
-  margin-left: 7%;
+
+#container {
+  background-color:white;
+  width: 800px;
+  margin-left: 10%;
   margin-right: 25%;
-  margin-bottom:1%;
-  max-height: 2%
-  float: center;
+  margin-top: 5%;
+}
+#header {
+  background-color: black;
+  height: 7em;
+
+}
+#navmenu {
+  background-color: black;
   position: relative;
+  height: 2em;
+  font-size: .8em;
+}
+#main {
+  padding: 8% 12% 12% 12%;
+  border-right: 8px solid #464646;
+  border-left: 8px solid #464646;
+  border-top: 1px dashed gray;
+  border-bottom: 1px dashed gray;
+  
+}
+#footer {
+  background-color: #464646;
+  text-align: center;
+  width:800px;
+  margin:0px;
 }
 
-h2 {
-  font-size: 16px;
+#landscape {
+/* border-image-source: url(../blog/img/landscape.png); */
+border-image-width: 300%;
+height: 100;
+
+background-color: rgb(150, 82, 109);
+}
+
+#message {
+background-color: rgb(150, 82, 109);
+height:100px;
+}
+
+#border-example {
+  border:1px dashed red;
+}
+ul {
+  position:relative;
+  list-style-type:none;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 0em;
+}
+
+h1 {
+  font-family: Titillium web, sans-serif;
+  padding: 25px;
+  margin: 0px 0px 0px 25px;
+  font-size:2em;
+  color: #FFFFFF;
+  position: relative;
+  top: 50px;
+  
 }
 
 h3 {
-  font-size: 14px;
-}
-
-main {
-  float: center;
-  background-color: white;
-  max-width: 50%;
-  padding: 5%;
-  margin-left: 10%;
-  border: 1px solid gray;
-}
-
-main div {
-  text-align: left;
- /* width:100%;*/
-  position: relative;
-  /*display: inline-block;*/
+  font-family: proxima-nova-sc-osf, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 2;
 
 }
-
-#barleft {
-  background-color: #3f9deb;
-  position: relative;
-  float: left;
-  border: 1px solid black;
-  height: 100%;
-  width: 100%;
-  display: inline-block;
+span {
+  color: #008ED1;
 }
-
-#barright {
-  background-color: #3f9deb;
-  position: relative;
-  float: right;
-  border: 1px solid black;
-  height: 100%;
-  width: 100%;
-  display: inline-block;
-}
-
-#share {
-  display: inline-block;
-}
-
-footer {
-  text-align: center;
-  font-size: 10px;
-  color: #b7b5bd;
-}
-
-textarea {
-  background-color: #b7b5bd;
+p {
+  font-family: Titillium web, sans-serif;
+  font-size: .9em;
   
+  margin: 0px;
+}
+li {
+  font-family: Titillium web, sans-serif;
+  display: inline-block;
+  margin-top:.5em;
 
 }
 
+a {
+  margin:0em .5em 0em .5em;
+  text-decoration: none;
+
+}
+
+
+a:link{
+  color: lightgray;
+}
+a:visited{
+  color: lightgray;
+}
+a:hover{
+  color: white;
+}

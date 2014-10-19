@@ -1,55 +1,99 @@
-html {
-	background-color: #cccccc;
+html{
+	background-color: black;
 }
-
-
 #container {
 	background-color:white;
 	width: 800px;
-	margin-left: 15%;
-	margin-right: 15%;
+	margin-left: 10%;
+	margin-right: 25%;
+	margin-top: 5%;
 }
 #header {
-	background-color:#FC915E;
+	background-color: black;
 	height: 6em;
-
 }
 #navmenu {
-	background-color:#666666;
+	background-color: black;
 	position: relative;
 	height: 2em;
+	font-size: .8em;
 }
 #main {
-	padding: 8%;
+	padding: 8% 12% 12% 12%;
+	border-right: 8px solid #464646;
+	border-left: 8px solid #464646;
+	border-top: 1px dashed gray;
+	border-bottom: 1px dashed gray;	
+}
+#keyboard {
+	background-color: black;
 }
 #footer {
-	background-color:#666666;
+	background-color: darkred;
 	text-align: center;
-	width:800px;
 	margin:0px;
+	color: white
 }
 
 ul {
 	position:relative;
 	list-style-type:none;
-	text-align: center;
+	text-align: left;
 	font-weight: bold;
 	margin-top: 0em;
 }
 
 h1 {
-	font-family: 'Roboto Slab', serif;
-	padding: 15px;
-	margin: 0px;
-	font-size:3em;
-	font-color: #666666;
-}
-p {
-	font-family: 'Quattrocento Sans', sans-serif;
+	font-family: Rockwell, sans-serif;
+	padding: 25px;
+	margin: 0px 0px 0px 25px;
+	font-size:2em;
+	color: #FFFFFF;
+	
+	top: 50px;
 	
 }
+
+h3 {
+	font-family: proxima-nova-sc-osf, sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	line-height: 2;
+
+}
+span {
+	color: #008ED1;
+}
+.intro {
+	font-family: Rockwell, sans-serif;
+	font-size: 2em;
+	margin: 0px;
+	color: white;
+	padding: 2%;
+	text-align: center;
+}
+#redsection{
+	background-color:darkred;
+	border-radius: 3em;
+	font-size:.8em;
+	width: 20em;;
+	padding:1em;
+	display:inline-block;
+	top: -25em;
+	position: relative;
+}
+#yellowsection{
+	background-color:#cc9933;
+	border-radius: 3em;
+	width: 15em;
+	padding:1em;
+	display:inline-block;
+	position: relative;
+	bottom: 7em;
+	right: -2em;
+}
 li {
-	font-family: 'Quattrocento Sans', sans-serif;
+	font-family: Titillium web, sans-serif;
 	display: inline-block;
 	margin-top:.5em;
 
@@ -63,11 +107,11 @@ a {
 
 
 a:link{
-	color: lightgray;
+	color: white;
 }
 a:visited{
-	color: lightgray;
+	color: white;
 }
 a:hover{
-	color: gray;
+	color: steelblue;
 }
