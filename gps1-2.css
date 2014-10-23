@@ -1,0 +1,49 @@
+ body {
+    font: Arial, sans-serif;    
+}
+
+img {
+	position:relative;
+	left: 15%;
+    
+    width: 70%;
+  
+}
+header {
+    background-color: lightblue;
+    border-bottom: 2px solid blue;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+    color: black;
+
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+div#container {
+    padding: 0 15%;
+    border: 2px solid lightblue;
+}
+
+div.post {
+    background-color: #123AFC;
+    padding: 2%;
+    border-radius: 20px;        
+}
+
+p {
+    color: white;
+}
+
+h3 {
+    color: yellow;
+}
+
+h4 { 
+    color: orange;
+}  
