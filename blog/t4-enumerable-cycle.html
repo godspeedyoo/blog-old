@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Quattrocento+Sans:400,700' rel='stylesheet' type='text/css'>
+	<title>
+	Joseph Won's Awesome Blog
+	</title>
+  </head>
+
+  <body>
+	<div id="header">
+		<h1>Technical<span>Blog</span></h1>
+	</div>
+	<div id="navmenu">
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+		   <!--  <li><a href="projects.html">Projects</a></li> -->
+			<li><a href="t1-git-blog.html">Git?</a></li>
+			<li><a href="t2-css-design.html">CSS Design</a></li>
+			<li><a href="t3-arrays-hashes.html">Arrays & Hashes</a></li>
+			<li><a href="t4-enumerable-cycle.html">Enumerable#cycle</a></li>
+			<li><a href="c1-chefs-kitchen.html">The Kitchen</a></li>
+			<li><a href="c3_thinking-style.html">Concrete Random Learner</a></li>
+		<li><a href="../gps1-2.html">Pair Programming (from the 90s!)</a></li>
+		</ul>
+	</div>
+	<div id="container">
+		
+
+		
+		<div id="main">
+			<div> 
+				<h2>Ruby: Enumerable#Cycle</h2>
+				<h2>10-31-14 by Joseph Won</h2>
+				<h3><p>Before we start talking about cycles, let's recall the Array. An array is something that can store data, like numbers or strings and looks like a bunch of items inside brackets, [], separated by commas:
+				</p>
+				<p class="code">
+					<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">array</span> <span style="color: #f92672">=</span> <span style="color: #f92672">[</span><span style="color: #e6db74">&quot;duck&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;duck&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;goose&quot;</span><span style="color: #f92672">]</span>
+					</pre></div>
+				</p>
+				<p>Here we have an Array of strings. What if we want to make it say, "duck duck goose"? Let's try <strong>puts</strong>:</p>
+				<p class="code">
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">array</span>
+
+<span style="color: #f8f8f2">duck</span>
+<span style="color: #f8f8f2">duck</span>
+<span style="color: #f8f8f2">goose</span>
+<span style="color: #f92672">=&gt;</span> <span style="color: #66d9ef">nil</span>
+</pre></div>
+
+				</p>
+				<p>So it looks like we can get it to display each of the elements our array down a list! What if we want to go through this twice, so we can say "duck duck goose duck duck goose" ? Let's use <strong>print</strong> to make it appear on the same line. We can also use a little trick here by multiplying our array by 2:
+				</p>           
+				<p class="code">
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">array</span><span style="color: #f92672">*</span><span style="color: #ae81ff">2</span>
+
+<span style="color: #f8f8f2">duckduckgooseduckduckgoose</span>
+<span style="color: #f92672">=&gt;</span> <span style="color: #66d9ef">nil</span>
+</pre></div>
+				</p>
+				<p>Yikes! That's not how we want it to look. Now, we can use a method called <strong>each</strong> to add spaces in between (actually, there are tons of ways to do this!), but let's look at how we can achieve this with cycle!</p>
+				<p>What exactly does cycle do? It will run through and do <em>something</em> to each element <em>n</em> number of times. Let's see what this looks like if we want to run through our array twice and <strong>print</strong> the result.</p>
+				<p class="code">
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">array</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cycle(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><span style="color: #f92672">|</span><span style="color: #f8f8f2">animal</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">animal}</span>
+
+<span style="color: #f8f8f2">duckduckgooseduckduckgoose</span>
+<span style="color: #f92672">=&gt;</span> <span style="color: #66d9ef">nil</span>
+</pre></div>
+				</p>
+				<p>You can see here we specify the number of times we want to cycle through, with <strong>(2)</strong>. 
+				<strong>|animal|</strong> is where we decide what to call each element we are referring to, and <strong>print animal</strong> is our command we are telling it to do for every element</p>
+				<p>Now let's tell it to add a space after every time we print the element:</p>
+				<p class="code">
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">array</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cycle(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><span style="color: #f92672">|</span><span style="color: #f8f8f2">animal</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">animal</span><span style="color: #f92672">+</span><span style="color: #e6db74">&quot; &quot;</span><span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">duck</span> <span style="color: #f8f8f2">duck</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">duck</span> <span style="color: #f8f8f2">duck</span> <span style="color: #f8f8f2">goose</span> 
+<span style="color: #f92672">=&gt;</span> <span style="color: #66d9ef">nil</span>
+</pre></div>
+				</p>
+
+				<p>Looking good! But wait, we can do even more within cycle! What if we want it to print only "goose"? Here we just add an <strong>if statement</strong>. Let's keep cycling until we have 20 geese!! Remember, one cycle has 2 elements of "goose", so we run this 10 times:
+				</p>
+				<p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">array</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cycle(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><span style="color: #f92672">|</span><span style="color: #f8f8f2">animal</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">animal</span><span style="color: #f92672">+</span><span style="color: #e6db74">&quot; &quot;</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">animal</span><span style="color: #f92672">==</span><span style="color: #e6db74">&quot;goose&quot;</span><span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> 
+<span style="color: #f92672">=&gt;</span> <span style="color: #66d9ef">nil</span>
+</pre></div>
+				</p>
+
+
+
+				<p>Voila! I count 10 geese in total. Remember, <strong>cycle</strong> allows us to run through some <em>n</em> number of times while allowing us the flexibility of telling it exactly how and what to do for every element in our array. Oh, and cycle works with other things too!</p>
+				<p class="code">
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">question</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;what?&quot;</span>
+
+<span style="color: #f8f8f2">question</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cycle(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><span style="color: #f92672">|</span><span style="color: #f8f8f2">x</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">x}</span>
+
+<span style="color: #f8f8f2">what?what?what?what?what?what?what?what?what?what?</span>
+<span style="color: #f92672">=&gt;</span> <span style="color: #66d9ef">nil</span>
+</pre></div>
+</p>
+				</h3>
+			</div>
+		</div>
+
+		<div id="footer">
+			<p>&copy; 2014 All Rights Reserved</p>
+		</div>
+			
+	</div>
+  </body>
+</html>
+	
+
