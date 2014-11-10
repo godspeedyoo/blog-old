@@ -2,38 +2,55 @@
 <html>
   <head>
     <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css"/>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Quattrocento+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic' rel='stylesheet' type='text/css'>
     <title>
-    Joseph Won's Awesome Blog
+    Joseph Won's Blog
     </title>
   </head>
 
   <body>
     <div id="header">
-        <h1>Technical<span>Blog</span></h1>
+        <a href="../index.html"><div class="heading">Joseph<span>Won</span></div></a>
     </div>
-    <div id="navmenu">
+    <div id="navtop">
+
+    </div>
+
+    <div id="navblog">
+        <h1>Technical Blogs</h1>
         <ul>
-            <li><a href="../index.html">Home</a></li>
-           <!--  <li><a href="projects.html">Projects</a></li> -->
-            <li><a href="t1-git-blog.html">Git?</a></li>
-            <li><a href="t2-css-design.html">CSS Design</a></li>
-            <li><a href="t3-arrays-hashes.html">Arrays & Hashes</a></li>
-            <li><a href="t4-enumerable-cycle.html">Enumerable#cycle</a></li>
-            <li><a href="c1-chefs-kitchen.html">The Kitchen</a></li>
-            <li><a href="c3_thinking-style.html">Concrete Random Learner</a></li>
-            <li><a href="c4-tech-issues.html">Tech Issues</a></li>
-        <li><a href="../gps1-2.html">Pair Programming (from the 90s!)</a></li>
+            <li><a href="t1-git-blog.html">1-Git?</a></li>
+            <li><a href="t2-css-design.html">2-CSS Design</a></li>
+            <li><a href="t3-arrays-hashes.html">3-Arrays & Hashes</a></li>
+            <li><a href="t4-enumerable-cycle.html">4-Enumerable#cycle</a></li>
+            <li><a href="t5-ruby-classes.html">5-Classes</a></li>
+        </ul>
+        <h1>Cultural Blogs</h1>
+        <ul>
+            <li><a href="c1-chefs-kitchen.html">1-The Kitchen</a></li>
+            <li><a href="c3_thinking-style.html">3-Concrete Random Learner</a></li>
+            <li><a href="c4-tech-issues.html">4-Tech Issues</a></li>
+            <li><a href="c5-feedback.html">5-Feedback</a></li>
+            <li><a href="../gps1-2.html">GPS 1.2-Pair Programming</a></li>
         </ul>
     </div>
-    <div id="container">
-        
 
-        
+    <div id="container">
+       
         <div id="main">
-            <div> 
-                <h2>Ruby: Arrays & Hashes</h2>
-                <h2>10-24-14 by Joseph Won</h2>
+            <div id="mainheader">
+                <div><i class="ribbon"><i><span>Oct<span>24</span></span></i>
+                </i>
+
+                </div>
+
+                <div id="mainline"></div>
+                <div id="title">
+                    <h1>Arrays & Hashes</h1>
+                </div>
+                    
+            </div>
+            <div id="post">
                 <h3><p>Imagine yourself a baseball card collector. You've accumulated a sizable collection and now wish to employ some sort of organizational system. You seek a reliable method to store, organize, and retrieve them when you need. Two of your friends, Jim and Steve, have always boasted that they can organize your collection for you, and that their system is the best. 
                 </p>
                 <p>Jim is a little special. As long as you've known him, he's been able to memorize numbers. Lots of them. One day, he shows you his binder of cards that he's kept and says to you, "I've put every single card in my collection in order, and if you tell me to find nth card, I can flip to it and find it in no time! Okay, let's put it to the test. Skeptically, you ask for the 257th card in his collection. Without looking, he flips open the sleeves and pulls out a Barry Bonds. Wow, okay this is great! Now, "find me a Sammy Sosa!". Jim is stumped, and has no words. "What's the matter, Jim?" You ask. Jim, abashed, looks down and admits, "I can't, because I'm an <strong>array...</strong></p>
@@ -78,14 +95,16 @@
 
 
                 <p>And there you have it, Arrays that can store your data in order and quickly retrieve them, and Hashes that can store sets of <strong>keys</strong> and <strong>values</strong>. In our example above, 'babe ruth' is a key that points to a certain value, 3. "Why not always use hashes since they're more flexible?", you might ask. True, they are flexible, but sometimes an array will do the trick, and faster. When we get into huge collections of data, speed can be an important factor in this decision. Also, you can even have an Arrays inside of a Hashs, or a Hashes with Arrays. Things can get crazy!</p></h3>
-            </div>
-        </div>
 
-        <div id="footer">
-            <p>&copy; 2014 All Rights Reserved</p>
-        </div>
-            
+
+            </div>
+        </div> 
     </div>
+
+    <div id="footer"></div>
+        
+            
+  
   </body>
 </html>
     

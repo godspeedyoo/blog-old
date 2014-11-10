@@ -1,106 +1,216 @@
 html {
   background-color: lightgray;
+
 }
 
 
 #container {
-  background-color:white;
-  width: 800px;
-  margin-left: 10%;
+  
+  width: 600px;
+  margin-left: 30%;
   margin-right: 25%;
-  margin-top: 5%;
+  display:inline-block;
+  padding:10px 0 40px; 0;
 }
 #header {
-  background-color: black;
+  background-color: #5D9B91;
   height: 7em;
+  border-bottom: 25px solid #9BB7B2;
+  margin: 0px;
 
 }
-#navmenu {
-  background-color: black;
-  position: relative;
+
+/* #navtop {
+  background-color: #F5BA92;
   height: 2em;
   font-size: .8em;
-}
+  margin-bottom: 5em;
+
+} */
+
+
 #main {
-  padding: 8% 12% 12% 12%;
-  border-right: 8px solid #464646;
-  border-left: 8px solid #464646;
-  border-top: 1px dashed gray;
-  border-bottom: 1px dashed gray;
+  background-color: #EEEEEE; 
+  padding: 5px;
+}
+/* #nav {
+  margin: 15px;
+  background-color: #C57640;
   
+  height: 5em;
+  width: 50%;
+  position: absolute;
+
+  
+} */
+#navblog {
+  border-left: 5px solid #0D6758;
+  background-color: #5D9B91;
+  width: 16em;
+  height: 23em;
+  position: absolute;
+  display: inline;
+  
+
 }
 #footer {
-  background-color: #464646;
+  background-color: #F5BA92;
   text-align: center;
-  width:800px;
-  margin:0px;
+  width:100%;
+  height: 15em;
+  border-bottom: 50px solid #C57640;
 }
 
-#landscape {
-/* border-image-source: url(../blog/img/landscape.png); */
-border-image-width: 300%;
-height: 100;
+body {
+  font-family: 'Ubuntu', sans-serif;
 
-background-color: rgb(150, 82, 109);
-}
-
-#message {
-background-color: rgb(150, 82, 109);
-height:100px;
-}
-
-#border-example {
-  border:1px dashed red;
 }
 ul {
   position:relative;
   list-style-type:none;
   text-align: left;
-  font-weight: bold;
+
   margin-top: 0em;
+  top: -30px;
+  padding: 10px;
+  border-bottom: 1px dashed white;
+  margin: 10px;
 }
 
-h1 {
-  font-family: Titillium web, sans-serif;
+.heading {
   padding: 25px;
   margin: 0px 0px 0px 25px;
   font-size:2em;
   color: #FFFFFF;
   position: relative;
-  top: 50px;
-  
+  top: 25px;
+
 }
 
-h3 {
-  font-family: proxima-nova-sc-osf, sans-serif;
-  font-size: 1em;
+.heading span {
+
+  font-size:1.2em;
+  color: #F5D492;
+  position: relative;
+}
+
+#mainheader {
+  background-color: #9BB7B2;
+  height: 4em;
+  width: 100%
+  position: relative;
+
+}
+#mainline {
+  background-color: #5D9B91;
+  height: .5em;
+  position: relative;
+
+}
+#mainline span {
+background-color: black;
+height: 5em;
+}
+.ribbon {
+    position: relative;
+}
+.ribbon > i {
+    position: absolute;
+    display: inline-block;
+    height: 3em;
+    border: 2.5em solid #5d9b91;
+    border-bottom: 2.5em solid transparent;
+    left: 0em;
+    top: 0em;
+}
+.ribbon span span {
+  font-style: normal;
+  color: white;
+  font-size: 2.0em;
+  left: -85px;
+  top: -20px;
+  position: absolute;
+}
+.ribbon span {
+  font-style: normal;
+  color: white;
+  
+  font-size: 2em;
+  left: 50px;
+  top: -20px;
+  position: absolute;
+}
+#year {
+  text-align: right;
+  right: 1000px;
+  position: absolute;
+  
+}
+#title {
+margin-left: 20%;
+
+  position: relative;
+ 
+
+}
+h1 {
+  padding: 25px;
+  margin: 0px 0px 0px 25px;
+  font-size:2em;
+  position: relative;
+  top: 50px;
+  color: #555555;
+  
+}
+#navblog h1{
+  font-size: 1.4em;
+  font-weight: normal;
+  padding: 10px;
+  margin: 10px 0 0 0;
+  top: -15px;
+  color: white;
+  
+}
+h2 {
+  font-size: 2em;
+  color: #5C5C5C;
   font-weight: normal;
   line-height: 2;
 
 }
+h3 {
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 2;
+  color: #555555;
+
+}
 span {
-  color: #008ED1;
+  color: #C57640;
+}
+#post {
+  margin: 100px 0 20px 0;
 }
 p {
-  font-family: Titillium web, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: .9em;
   padding: .5em;
   margin: 0px;
+  font-color: red;
+  padding: 15px;
+  border-bottom: 1px solid lightgray;
 }
 li {
-  font-family: Titillium web, sans-serif;
-  display: inline-block;
-  margin-top:.5em;
-
+  font-family: 'Ubuntu', sans-serif;
 }
 
-a {
-  margin:0em .5em 0em .5em;
+li a {
   text-decoration: none;
-
 }
 
-
+#header a{
+  text-decoration: none;
+}
 a:link{
   color: lightgray;
 }

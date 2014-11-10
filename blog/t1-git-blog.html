@@ -2,38 +2,55 @@
 <html>
   <head>
     <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css"/>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Quattrocento+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic' rel='stylesheet' type='text/css'>
     <title>
-    Joseph Won's Technical Blog
+    Joseph Won's Blog
     </title>
   </head>
 
   <body>
     <div id="header">
-        <h1>Technical<span>Blog</span></h1>
+        <a href="../index.html"><div class="heading">Joseph<span>Won</span></div></a>
     </div>
-    <div id="navmenu">
+    <div id="navtop">
+
+    </div>
+
+    <div id="navblog">
+        <h1>Technical Blogs</h1>
         <ul>
-            <li><a href="../index.html">Home</a></li>
-           <!--  <li><a href="projects.html">Projects</a></li> -->
-            <li><a href="t1-git-blog.html">Git?</a></li>
-            <li><a href="t2-css-design.html">CSS Design</a></li>
-            <li><a href="t3-arrays-hashes.html">Arrays & Hashes</a></li>
-            <li><a href="t4-enumerable-cycle.html">Enumerable#cycle</a></li>
-            <li><a href="c1-chefs-kitchen.html">The Kitchen</a></li>
-            <li><a href="c3_thinking-style.html">Concrete Random Learner</a></li>
-            <li><a href="c4-tech-issues.html">Tech Issues</a></li>
-        <li><a href="../gps1-2.html">Pair Programming (from the 90s!)</a></li>       
+            <li><a href="t1-git-blog.html">1-Git?</a></li>
+            <li><a href="t2-css-design.html">2-CSS Design</a></li>
+            <li><a href="t3-arrays-hashes.html">3-Arrays & Hashes</a></li>
+            <li><a href="t4-enumerable-cycle.html">4-Enumerable#cycle</a></li>
+            <li><a href="t5-ruby-classes.html">5-Classes</a></li>
+        </ul>
+        <h1>Cultural Blogs</h1>
+        <ul>
+            <li><a href="c1-chefs-kitchen.html">1-The Kitchen</a></li>
+            <li><a href="c3_thinking-style.html">3-Concrete Random Learner</a></li>
+            <li><a href="c4-tech-issues.html">4-Tech Issues</a></li>
+            <li><a href="c5-feedback.html">5-Feedback</a></li>
+            <li><a href="../gps1-2.html">GPS 1.2-Pair Programming</a></li>
         </ul>
     </div>
-    <div id="container">
-        
 
-        
+    <div id="container">
+       
         <div id="main">
-            <div> 
-                <h2>Version Control and GitHub</h2>
-                <h2>10-12-14 by Joseph Won</h2>
+            <div id="mainheader">
+                <div><i class="ribbon"><i><span>Oct<span>12</span></span></i>
+                </i>
+
+                </div>
+
+                <div id="mainline"></div>
+                <div id="title">
+                    <h1>Version Control and GitHub</h1>
+                </div>
+                    
+            </div>
+            <div id="post">
                 <h3><p>Version control. I can't remember how many times I would work on an excel or word document and constantly save multiple backups labeled xxx.v1, v2, v-final, final-final. Okay, maybe not the "final-final", but you never really know how far this can go. Add to this the complication of working and passing a document across multiple people, and god forbid two people decide to work on the same file simulatenously. Well, it looks like this problem has been solved by git - the ultimate (it just seems too ubiquitous to say otherwise, for now) version control system. Before I go into what git is, I'd like to elaborate on version control itself.
                 </p>
 
@@ -42,14 +59,16 @@
                 <p>Git is version control done in a brilliant way. It won't store the entire project or file as another copy. Instead, when you make any change at all, it will store that change specifically. In other words, it has the ability to compartmentalize changes done to a file rather than stored an entirely new copy of the file itself. These changes or save-states are referred to as "commits".</p>
 
                 <p>What Git allows you to do locally, on your computer, GitHub allows for this version control system to be done over the internet. In fact, it provides value as a central location where many developers can connect, fork, pull or push their code. Essentially, GitHub allows for a team of developers to see others' changes, obtain a working copy to work from, and suggest their own changes from all over the world. You don't even need to maintain an online connection to do work. GitHub allows you to store the latest snapshot locally, and, when you're ready, compare your suggested changes with the latest version of the project. If these changes are deemed worthy of meshing seamlessly, GitHub will happily apply your recent changes to modify the code - the source of which everyone will compare against.</p></h3>
-            </div>
-        </div>
 
-        <div id="footer">
-            <p>&copy; 2014 All Rights Reserved</p>
-        </div>
-            
+
+            </div>
+        </div> 
     </div>
+
+    <div id="footer"></div>
+        
+            
+  
   </body>
 </html>
     
