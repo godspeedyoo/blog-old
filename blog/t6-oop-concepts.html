@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic' rel='stylesheet' type='text/css'>
+    <title>
+    Joseph Won's Blog
+    </title>
+  </head>
+
+  <body>
+    <div id="header">
+        <a href="../index.html"><div class="heading">Joseph<span>Won</span></div></a>
+    </div>
+    <div id="navtop">
+
+    </div>
+
+    <div id="navblog">
+        <h1>Technical Blogs</h1>
+        <ul>
+            <li><a href="t1-git-blog.html">1-Git?</a></li>
+            <li><a href="t2-css-design.html">2-CSS Design</a></li>
+            <li><a href="t3-arrays-hashes.html">3-Arrays & Hashes</a></li>
+            <li><a href="t4-enumerable-cycle.html">4-Enumerable#cycle</a></li>
+            <li><a href="t5-ruby-classes.html">5-Classes</a></li>
+            <li><a href="t6-oop-concepts.html">6-Blocks, Procs, Lambdas</a></li>
+        </ul>
+        <h1>Cultural Blogs</h1>
+        <ul>
+            <li><a href="c1-chefs-kitchen.html">1-The Kitchen</a></li>
+            <li><a href="c3_thinking-style.html">3-Concrete Random Learner</a></li>
+            <li><a href="c4-tech-issues.html">4-Tech Issues</a></li>
+            <li><a href="c5-feedback.html">5-Feedback</a></li>
+            <li><a href="../gps1-2.html">GPS 1.2-Pair Programming</a></li>
+        </ul>
+    </div>
+
+    <div id="container">
+       
+        <div id="main">
+            <div id="mainheader">
+                <div><i class="ribbon"><i><span>Nov<span>14</span></span></i>
+                </i>
+
+                </div>
+
+                <div id="mainline"></div>
+                <div id="title">
+                    <h1>Blocks, Procs, Lambdas</h1>
+                </div>
+                    
+            </div>
+            <div id="post">
+                <h2>Blocks</h2>
+                <p>What is a block, proc, and lambda, and how are they used? We've actually already seen blocks. Can you spot them here?</p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">[</span><span style="color: #e6db74">&quot;A&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;B&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;C&quot;</span><span style="color: #f92672">].</span><span style="color: #f8f8f2">each</span> <span style="color: #66d9ef">do</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">letter</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">letter</span> <span style="color: #66d9ef">end</span>
+
+<span style="color: #f92672">[</span><span style="color: #e6db74">&quot;A&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;B&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;C&quot;</span><span style="color: #f92672">].</span><span style="color: #f8f8f2">each</span> <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">letter</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">letter}</span>
+</pre></div>
+                <p>Here are two blocks being called for the each method.</p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">do</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">letter</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">letter</span> <span style="color: #66d9ef">end</span>
+
+<span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">letter</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">letter}</span>
+</pre></div>    
+                <h2>Procs</h2>
+                <p>Blocks are useful to allow methods to do more complex operations. However, they cannot be taken out of context and do not allow for more than block to be passed into a method argument. What if we want to reuse the logic written in the block and apply it to other objects? This is where Procs come in. 
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">printer</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">Proc</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new</span> <span style="color: #f8f8f2">{</span><span style="color: #f92672">|</span><span style="color: #f8f8f2">letter</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">letter}</span>
+</pre></div>    
+                <p>Procs are actually objects themselves!</p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">printer</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">class</span>
+
+<span style="color: #f92672">=&gt;</span> <span style="color: #66d9ef">Proc</span>
+</pre></div>
+
+                <p>How can we use a proc? Well, since the method each can only take in a single block, we can send it a proc while using a special operator, '&' in order to tell Ruby to treat this as a block. Let's call the each method on our letters array and see what we get.</p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">letters</span> <span style="color: #f92672">=</span> <span style="color: #f92672">[</span><span style="color: #e6db74">&quot;A&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;B&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;C&quot;</span><span style="color: #f92672">]</span>
+
+<span style="color: #f8f8f2">printer</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">Proc</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new</span> <span style="color: #f8f8f2">{</span><span style="color: #f92672">|</span><span style="color: #f8f8f2">letter</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">letter}</span>
+
+<span style="color: #f8f8f2">letters</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">each(</span><span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">printer)</span>
+
+<span style="color: #f8f8f2">A</span>
+<span style="color: #f8f8f2">B</span>
+<span style="color: #f8f8f2">C</span>
+</pre></div>
+                <p>Procs will certainly help us keeping our code DRY. Let's see an example of one way to reuse procs.</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">sequence_procs</span><span style="color: #f8f8f2">(proc1,</span> <span style="color: #f8f8f2">proc2,</span> <span style="color: #f8f8f2">proc3)</span>
+    <span style="color: #f8f8f2">proc1</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">call</span>
+    <span style="color: #f8f8f2">proc2</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">call</span>
+    <span style="color: #f8f8f2">proc3</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">call</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #f8f8f2">first</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">Proc</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Running first proc...&quot;</span> <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">second</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">Proc</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Running second proc...&quot;</span> <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">third</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">Proc</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Running third proc...&quot;</span> <span style="color: #f8f8f2">}</span>
+</pre></div>
+
+                <p>Here, we have set up a method that will take in three proc arguments and will call them in a sequence. What do you think will output?</p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">sequence_procs(first,</span> <span style="color: #f8f8f2">second,</span> <span style="color: #f8f8f2">third)</span>
+</pre></div>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">Running first proc...
+Running second proc...
+Running third proc...
+</pre></div>
+                <h2>Lambdas</h2>
+                <p>We can think of Lambdas as the same thing as procs with a few subtle differences. Here's how a lambda is created. This should look very familiar.</p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">letters</span> <span style="color: #f92672">=</span> <span style="color: #f92672">[</span><span style="color: #e6db74">&quot;A&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;B&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;C&quot;</span><span style="color: #f92672">]</span>
+
+<span style="color: #f8f8f2">lamb_printer</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">lambda</span> <span style="color: #f8f8f2">{</span><span style="color: #f92672">|</span><span style="color: #f8f8f2">letter</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">letter}</span>
+
+<span style="color: #f8f8f2">letters</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">each(</span><span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">lamb_printer)</span>
+</pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">A
+B
+C
+</pre></div>
+                <p>A key distinction should be made when we ask a proc or lambda to return something. Let's first look at how a Proc would return a string within a method. Pay attention to the result object.</p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">try_proc</span>
+    <span style="color: #f8f8f2">result</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">Proc</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new</span> <span style="color: #f8f8f2">{</span> <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&quot;Here is the proc.&quot;</span> <span style="color: #f8f8f2">}</span>
+    <span style="color: #f8f8f2">result</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">call</span>
+    <span style="color: #f8f8f2">p</span> <span style="color: #e6db74">&quot;End of proc method.&quot;</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #f8f8f2">p</span> <span style="color: #f8f8f2">try_proc</span>
+</pre></div>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">=&gt; <span style="color: #a31515">&quot;Here is the proc.&quot;</span>
+</pre></div>
+
+
+                <p>Our proc is being called on this object, so normally we would expect the string "Here is the proc." to be returned to result object, and not when calling the method. Normally we expect try_proc to display "End of proc method", but this is not the case. Proc does not care about the context in this case, and acts as if the method itself is returning "Here is the proc". Let's see what happens when we use a lambda.</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">try_lambda</span>
+    <span style="color: #f8f8f2">result</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">lambda</span> <span style="color: #f8f8f2">{</span> <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&quot;Here is the lambda&quot;</span> <span style="color: #f8f8f2">}</span>
+    <span style="color: #f8f8f2">result</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">call</span>
+    <span style="color: #f8f8f2">p</span> <span style="color: #e6db74">&quot;End of lambda method.&quot;</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #f8f8f2">p</span> <span style="color: #f8f8f2">try_lambda</span>
+</pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #a31515">&quot;End of lambda method.&quot;</span>
+</pre></div>
+                <p>Here, nothing is returned from the method itself. Instead, the code runs through and prints the "End of the lambda method". This is more conventional since it behaves exactly as we'd expect according to principles of scope. Procs being context insensitive can be beneficial as long as they are used with discretion.</p>
+
+
+
+
+            </div>
+        </div> 
+    </div>
+
+    <div id="footer"></div>
+        
+            
+  
+  </body>
+</html>
+    
+

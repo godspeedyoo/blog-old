@@ -176,6 +176,10 @@ h2 {
   color: #5C5C5C;
   font-weight: normal;
   line-height: 2;
+  border-bottom: 1px solid gray;
+  margin-left: 30px;
+  margin-right: 30px;
+  
 
 }
 h3 {
@@ -198,7 +202,6 @@ p {
   margin: 0px;
   font-color: red;
   padding: 15px;
-  border-bottom: 1px solid lightgray;
 }
 li {
   font-family: 'Ubuntu', sans-serif;
