@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic' rel='stylesheet' type='text/css'>
+    <title>
+    Joseph Won's Blog
+    </title>
+  </head>
+
+  <body>
+    <div id="header">
+        <a href="../index.html"><div class="heading">Joseph<span>Won</span></div></a>
+    </div>
+    <div id="navtop">
+
+    </div>
+
+    <div id="navblog">
+        <h1>Technical Blogs</h1>
+        <ul>
+            <li><a href="t1-git-blog.html">1-Git?</a></li>
+            <li><a href="t2-css-design.html">2-CSS Design</a></li>
+            <li><a href="t3-arrays-hashes.html">3-Arrays & Hashes</a></li>
+            <li><a href="t4-enumerable-cycle.html">4-Enumerable#cycle</a></li>
+            <li><a href="t5-ruby-classes.html">5-Classes</a></li>
+            <li><a href="t6-oop-concepts.html">6-Blocks, Procs, Lambdas</a></li>
+            <li><a href="t7-JavaScript.html">7-JavaScript</a></li>
+        </ul>
+        <h1>Cultural Blogs</h1>
+        <ul>
+            <li><a href="c1-chefs-kitchen.html">1-The Kitchen</a></li>
+            <li><a href="c3_thinking-style.html">3-Concrete Random Learner</a></li>
+            <li><a href="c4-tech-issues.html">4-Tech Issues</a></li>
+            <li><a href="c5-feedback.html">5-Feedback</a></li>
+            <li><a href="c6-stereotype-threat.html">6-Stereotype Threat</a></li>
+            <li><a href="../gps1-2.html">GPS 1.2-Pair Programming</a></li>
+        </ul>
+    </div>
+
+    <div id="container">
+       
+        <div id="main">
+            <div id="mainheader">
+                <div><i class="ribbon"><i><span>Nov<span>21</span></span></i>
+                </i>
+
+                </div>
+
+                <div id="mainline"></div>
+                <div id="title">
+                    <h1>Ruby Hashes vs. JavaScript Objects</h1>
+                </div>
+                    
+            </div>
+            <div id="post">
+
+            <h2>The Ruby Hash</h2>
+            <p> In Ruby, hashes are types of objects (of the class Hash) that contain data in pairs. Each pair is made up of a key and a value. Keys are unique, and both keys and values can be referenced. You can be flexible with the type of data you can store, such as Strings, Integers, Arrays, and even other Hashes.</p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">example_hash</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span> <span style="color: #e6db74">:name</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&quot;Joe&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">:age</span> <span style="color: #f92672">=&gt;</span> <span style="color: #ae81ff">27</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">:location</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&quot;Virginia&quot;</span> <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">example_hash</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">name</span><span style="color: #e6db74">:&quot;Joe&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">age</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">27</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">location</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;Virginia&quot;</span> <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">example_hash</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">Hash</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new</span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #f8f8f2">name</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&quot;Joe&quot;</span><span style="color: #f8f8f2">,</span>
+  <span style="color: #f8f8f2">age</span> <span style="color: #f92672">=&gt;</span> <span style="color: #ae81ff">27</span><span style="color: #f8f8f2">,</span>
+  <span style="color: #f8f8f2">location</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&quot;Virginia</span>
+<span style="color: #e6db74">}</span>
+</pre></div>
+            <p> All three are valid ways to create a hash object. We can access these keys by doing the following:</p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">example_hash</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span> <span style="color: #e6db74">:name</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&quot;Joe&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">:age</span> <span style="color: #f92672">=&gt;</span> <span style="color: #ae81ff">27</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">:location</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&quot;Virginia&quot;</span> <span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">example_hash</span><span style="color: #f92672">[</span><span style="color: #e6db74">:name</span><span style="color: #f92672">]</span>
+</pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">=&gt; <span style="color: #a31515">&quot;Joe&quot;</span>
+</pre></div>
+
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">example_hash</span><span style="color: #f92672">[</span><span style="color: #e6db74">:age</span><span style="color: #f92672">]</span>
+</pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">=&gt; 27
+</pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">example_hash</span><span style="color: #f92672">[</span><span style="color: #e6db74">:location</span><span style="color: #f92672">]</span>
+</pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">=&gt; <span style="color: #a31515">&quot;Virginia&quot;</span>
+</pre></div>
+            <p>Because Hash objects in Ruby come with their own set of Hash methods already built in, you can do things like find the first matching key if given a certain value, or find out how many key/value pairs exist:</p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">example_hash</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">key(</span><span style="color: #e6db74">&quot;Joe&quot;</span><span style="color: #f8f8f2">)</span>
+</pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">=&gt; <span style="color: #a31515">:name</span>
+</pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">example_hash</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">size</span>
+</pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">=&gt; 3
+</pre></div>
+            <h2>JavaScript Objects</h2>
+            <p>In JavaScript, any object already comes with the ability to store data about itself in what looks similar to a Hash, without it being specifically a Hash object. You can initialize any object with its properties, access them, or even add or change them along the life of this object.</p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">var</span> <span style="color: #a6e22e">student</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span> <span style="color: #a6e22e">name</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&quot;Joe&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">age</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">27</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">location</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&quot;Virginia&quot;</span> <span style="color: #f8f8f2">};</span>
+
+<span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">student</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">name</span><span style="color: #f8f8f2">);</span>
+</pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">Joe
+</pre></div>
+            <p>Let's add properties to our student object:</p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #a6e22e">student</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">lastname</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;Won&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #a6e22e">student</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">gpa</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">3.7</span><span style="color: #f8f8f2">;</span>
+<span style="color: #a6e22e">student</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">classOf</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">2009</span><span style="color: #f8f8f2">;</span>
+
+<span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">student</span><span style="color: #f8f8f2">)</span>
+</pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">{ name: <span style="color: #a31515">&#39;Joe&#39;</span>, age: 27, location: <span style="color: #a31515">&#39;Virginia&#39;</span>, lastname: <span style="color: #a31515">&#39;Won&#39;</span>, gpa: 3.7, classOf: 2009 }
+</pre></div>
+            <p>So far, it appears that Ruby hashes and JavaScript objects function the same. There is a distinction, however, based on how JavaScript and Ruby both think of objects slightly differently. Here, we didn't have to specify that our JavaScript object was to be some kind of hash. It just knows to give it properties and handle them in certain ways. Whereas, Ruby requires you to create an object of a specific class, in this case a Hash, so that it knows how it should behave. Here we can see how both languages classify our objects:</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">typeof</span> <span style="color: #a6e22e">student</span><span style="color: #f8f8f2">)</span>
+</pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">object
+</pre></div>
+            <p>And in Ruby:</p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">example_hash</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">class</span>
+</pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">=&gt; Hash
+</pre></div>
+            
+
+            </div>
+        </div> 
+    </div>
+
+    <div id="footer"></div>
+        
+            
+  
+  </body>
+</html>
+    
+
