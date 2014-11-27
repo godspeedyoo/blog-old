@@ -47,7 +47,7 @@ html {
   border-left: 5px solid #0D6758;
   background-color: #5D9B91;
   width: 16em;
-  height: 23em;
+  height: 26em;
   position: absolute;
   display: inline;
   
@@ -204,11 +204,22 @@ p {
   padding: 15px;
 }
 li {
-  font-family: 'Ubuntu', sans-serif;
+  margin-left: 35px;
 }
+
+ul li {
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 0px;
+}
+
+
 
 li a {
   text-decoration: none;
+}
+
+table {
+  margin-left: 35px;
 }
 
 #header a{
