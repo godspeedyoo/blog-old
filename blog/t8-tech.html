@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic' rel='stylesheet' type='text/css'>
+    <title>
+    Joseph Won's Blog
+    </title>
+  </head>
+
+  <body>
+    <div id="header">
+        <a href="../index.html"><div class="heading">Joseph<span>Won</span></div></a>
+    </div>
+    <div id="navtop">
+
+    </div>
+
+    <div id="navblog">
+        <h1>Technical Blogs</h1>
+        <ul>
+            <li><a href="t1-git-blog.html">1-Git?</a></li>
+            <li><a href="t2-css-design.html">2-CSS Design</a></li>
+            <li><a href="t3-arrays-hashes.html">3-Arrays & Hashes</a></li>
+            <li><a href="t4-enumerable-cycle.html">4-Enumerable#cycle</a></li>
+            <li><a href="t5-ruby-classes.html">5-Classes</a></li>
+            <li><a href="t6-oop-concepts.html">6-Blocks, Procs, Lambdas</a></li>
+            <li><a href="t7-JavaScript.html">7-JavaScript</a></li>
+            <li><a href="t8-tech.html">8-SQL Injection</a></li>
+        </ul>
+        <h1>Cultural Blogs</h1>
+        <ul>
+            <li><a href="c1-chefs-kitchen.html">1-The Kitchen</a></li>
+            <li><a href="c3_thinking-style.html">3-Concrete Random Learner</a></li>
+            <li><a href="c4-tech-issues.html">4-Tech Issues</a></li>
+            <li><a href="c5-feedback.html">5-Feedback</a></li>
+            <li><a href="c6-stereotype-threat.html">6-Stereotype Threat</a></li>
+            <li><a href="c7-values.html">7-Values</a></li>
+            <li><a href="../gps1-2.html">GPS 1.2-Pair Programming</a></li>
+            
+        </ul>
+    </div>
+
+    <div id="container">
+       
+        <div id="main">
+            <div id="mainheader">
+                <div><i class="ribbon"><i><span>Nov<span>28</span></span></i>
+                </i>
+
+                </div>
+
+                <div id="mainline"></div>
+                <div id="title">
+                    <h1>SQL Injection</h1>
+                </div>
+
+                    
+            </div>
+            <div id="post">
+
+                <h2>What is SQL Injection?</h2>
+                <p>SQL injection is one of the most common types of attacks against data driven web applications. This type of attack takes advantage of user input fields to embed pieces of SQL commands that tricks the SQL query to doing what the attacker wants to do. This is a very important topic for web developers as SQL injections are prevalant and easy to accomplish if there are no safeguards in place.</p>
+
+                <p>SQL injection can be used to steal sensitive personal data such as passwords, emails, credit cards, and social security numbers. Many features of a web app such as login, search fields, shopping, and other things that require communicating with a database using user input can be susceptible to injection attacks by the very nature of taking a user input and querying the database. The following examples are provided in the wiki <a href="http://en.wikipedia.org/wiki/SQL_injection">here</a></p>
+<!-- HTML generated using hilite.me --><div style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007020; font-weight: bold">statement</span> <span style="color: #666666">=</span> <span style="color: #517918">&quot;SELECT * FROM users WHERE name =&#39;&quot;</span> <span style="color: #666666">+</span> userName <span style="color: #666666">+</span> <span style="color: #517918">&quot;&#39;;&quot;</span>
+</pre></div>
+                <h2>Unfiltered Escape Characters</h2>
+                <p>Here is an example of a simple injected statement taking advantage of the lack of sanitizing for escape characters.</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #f0f3f3; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #CC3300">&#39; or &#39;</span><span style="color: #FF6600">1</span><span style="color: #CC3300">&#39;=&#39;</span><span style="color: #FF6600">1</span>
+</pre></div>
+                <p>Notice the intentional use a single " ' " to close the opening apostrophe. This creates an escape for the SQL interpreter to read the next part, "or" as a logic operator. The '1' = '1 is here so that the statement can always evaluate to TRUE, and the '1 is left open so that when this user input field is wrapped around a set of ' ', it closes the statement neatly. The result looks like:</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #AA22FF; font-weight: bold">statement</span> <span style="color: #666666">=</span> <span style="color: #B8860B">&quot;SELECT * FROM users WHERE name =&#39;&quot;</span> <span style="color: #666666">+</span> <span style="color: #BB4444">&#39; or &#39;</span><span style="color: #666666">1</span><span style="color: #BB4444">&#39;=&#39;</span><span style="color: #666666">1</span> <span style="color: #666666">+</span> <span style="color: #B8860B">&quot;&#39;;&quot;</span>
+</pre></div>
+                <p>It will be interpreted as:</p>
+<!-- HTML generated using hilite.me --><div style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007020; font-weight: bold">SELECT</span> <span style="color: #666666">*</span> <span style="color: #007020; font-weight: bold">FROM</span> users <span style="color: #007020; font-weight: bold">WHERE</span> name <span style="color: #666666">=</span> <span style="color: #4070a0">&#39;&#39;</span> <span style="color: #007020; font-weight: bold">OR</span> <span style="color: #4070a0">&#39;1&#39;</span><span style="color: #666666">=</span><span style="color: #4070a0">&#39;1&#39;</span>;
+</pre></div>
+
+                <p>Another technique is to block the rest of the query by ending the injection statement with an opening comment:</p>            
+
+<!-- HTML generated using hilite.me --><div style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #4070a0">&#39; or &#39;</span><span style="color: #40a070">1</span><span style="color: #4070a0">&#39;=&#39;</span><span style="color: #40a070">1</span><span style="border: 1px solid #FF0000">&#39;</span> <span style="color: #60a0b0; font-style: italic">--</span>
+</pre></div>
+
+                <p>This causes the intepreter to mistakenly comment out anything that comes after it</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007020; font-weight: bold">SELECT</span> <span style="color: #666666">*</span> <span style="color: #007020; font-weight: bold">FROM</span> users <span style="color: #007020; font-weight: bold">WHERE</span> name <span style="color: #666666">=</span> <span style="color: #4070a0">&#39;&#39;</span> <span style="color: #007020; font-weight: bold">OR</span> <span style="color: #4070a0">&#39;1&#39;</span><span style="color: #666666">=</span><span style="color: #4070a0">&#39;1&#39;</span> <span style="color: #60a0b0; font-style: italic">-- &#39;;Commented commands here</span>
+</pre></div>
+
+                <h2>Type Handling</h2>
+                <p>Users can also take advantage of the lack of type handling for input fields. Here we are expecting a numeric type, but we have inputted a string instead:</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007020; font-weight: bold">statement</span> :<span style="color: #666666">=</span> <span style="color: #517918">&quot;SELECT * FROM userinfo WHERE id =&quot;</span> <span style="color: #666666">+</span> a_variable <span style="color: #666666">+</span> <span style="color: #517918">&quot;;&quot;</span>
+</pre></div>
+
+                <p>A malicious SQL injection may look like this:</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #40a070">1</span>;<span style="color: #007020; font-weight: bold">DROP</span> <span style="color: #007020; font-weight: bold">TABLE</span> users
+</pre></div>
+                <p>As a result, the interpreted command will delete the entire table called "users".</p>
+
+                <h2>Blind SQL Injection</h2>
+                <p>The concept of blind injection comes when there is no control for the types of inputs, and the attacker types in queries to try to glean bits of information from the server. The attacker doesn not necessarily need to know that names of tables or fields, but through automated queries, one can determine more information that may lead to a discovery of vulnerabilities to utilize.</p>
+
+                <h2>Preventing SQL Injection</h2>
+                <p>There are many different techniques you may employ to help to mitigate the vulnerabilities related to SQL injection. Input validation is one of the simplest and easiest ways, where you authenticate the users input based on the type of data, length, and syntax. Another way is to ensure that users interacting with the database have the least amount of priveleges to access, read, write, and modify data. Lastly, using parameterized statements instead of directly embedding user input into SQL code can help to enforce correct execution of SQL queries. Here you simply use placeholders to store the values of the input and any SQL injected as the input is not treated as part of the SQL statement.</p>
+            </div>
+        </div> 
+    </div>
+
+    <div id="footer"></div>
+        
+            
+  
+  </body>
+</html>
+    
+
