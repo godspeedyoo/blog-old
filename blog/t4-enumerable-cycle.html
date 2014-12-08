@@ -1,70 +1,84 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css"/>
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic' rel='stylesheet' type='text/css'>
-    <title>
-    Joseph Won's Blog
-    </title>
-  </head>
+<html lang="en">
+<head>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A learning web developer's blog">
+    <meta name="author" content="Joseph Won">
+    <title>Home</title>
 
-  <body>
-    <div id="header">
-        <a href="../index.html"><div class="heading">Joseph<span>Won</span></div></a>
-    </div>
-    <div id="navtop">
+    <!-- Bootstrap CSS file -->
+    <link href="../bootstrap-3.3.1-dist\dist\css\bootstrap.min.css" rel="stylesheet" />
+    <link href="../bootstrap-3.3.1-dist\dist\css\bootstrap-theme.css" rel="stylesheet" />
+    <link href="../stylesheets/blog.css" rel="stylesheet" />
+</head>
 
-    </div>
+ 
+<body>
 
-    <div id="navblog">
-        <h1>Technical Blogs</h1>
-        <ul>
-            <li><a href="t1-git-blog.html">1-Git?</a></li>
-            <li><a href="t2-css-design.html">2-CSS Design</a></li>
-            <li><a href="t3-arrays-hashes.html">3-Arrays & Hashes</a></li>
-            <li><a href="t4-enumerable-cycle.html">4-Enumerable#cycle</a></li>
-            <li><a href="t5-ruby-classes.html">5-Classes</a></li>
-            <li><a href="t6-oop-concepts.html">6-Blocks, Procs, Lambdas</a></li>
-            <li><a href="t7-JavaScript.html">7-JavaScript</a></li>
-            <li><a href="t8-tech.html">8-SQL Injection</a></li>
-        </ul>
-        <h1>Cultural Blogs</h1>
-        <ul>
-            <li><a href="c1-chefs-kitchen.html">1-The Kitchen</a></li>
-            <li><a href="c3_thinking-style.html">3-Concrete Random Learner</a></li>
-            <li><a href="c4-tech-issues.html">4-Tech Issues</a></li>
-            <li><a href="c5-feedback.html">5-Feedback</a></li>
-            <li><a href="c6-stereotype-threat.html">6-Stereotype Threat</a></li>
-            <li><a href="c7-values.html">7-Values</a></li>
-            <li><a href="c8-conflict.html">8-Conflict</a></li>
-            <li><a href="../gps1-2.html">GPS 1.2-Pair Programming</a></li>
-        </ul>
-    </div>
+        <!-- Jquery and Bootstrap Script files -->
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="bootstrap-3.3.1-dist\dist\js\bootstrap.min.js"></script>
 
-    <div id="container">
-       
-        <div id="main">
-            <div id="mainheader">
-                <div><i class="ribbon"><i><span>Oct<span>31</span></span></i>
-                </i>
-
+        <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">         
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">Joseph Won</a>
                 </div>
-
-                <div id="mainline"></div>
-                <div id="title">
-                    <h1>Ruby: Enumerable#cycle</h1>
-                </div>
-                    
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                    <form class="navbar-form navbar-right" role="search">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                      <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="../index.html">Home</a></li>
+                        <li><a href="../archive.html">Archive</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                        <li><a href="../about.html">About</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div id="post">
-            					<h3><p>Before we start talking about cycles, let's recall the Array. An array is something that can store data, like numbers or strings and looks like a bunch of items inside brackets, [], separated by commas:
-				</p>
-				<p class="code">
-					<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">array</span> <span style="color: #f92672">=</span> <span style="color: #f92672">[</span><span style="color: #e6db74">&quot;duck&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;duck&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;goose&quot;</span><span style="color: #f92672">]</span>
-					</pre></div>
-				</p>
-				<p>Here we have an Array of strings. What if we want to make it say, "duck duck goose"? Let's try <strong>puts</strong>:</p>
-				<p class="code">
+        </header>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-lg-7 col-md-offset-1 col-lg-offset-1">
+                <article>
+                    <h2><a href="t4-enumerable-cycle.html">Ruby's Enumerable#Cycle</a><span class="pull-right">Oct 31st</span></h2>
+                    <div class="row">
+                        <div class="group1 col-sm-6 col-md-6">
+                            <span class="glyphicon glyphicon-folder-open"></span>  <a href="#">Technical</a>
+                              <span class="glyphicon glyphicon-bookmark"></span> <a href="#">Ruby</a>
+                        </div>
+                        <!--<div class="group2 col-sm-6 col-md-6">
+                            <span class="glyphicon glyphicon-pencil"></span> <a href="singlepost.html#comments">0 Comments</a>
+                              <span class="glyphicon glyphicon-time"></span> Insert Time here
+                        </div> -->
+                    </div>
+                    <hr>
+                    <img class="img-container" src="img/cycle.jpg" class="img-responsive">
+                    Photo credit: <a href="https://www.flickr.com/photos/willj/15398484857/">will_cyclist</a> / <a href="http://foter.com">Foter</a> / <a href="http://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC</a>
+                    <br>
+                    <br>
+<p>Before we start talking about cycles, let's recall the Array. An array is something that can store data, like numbers or strings and looks like a bunch of items inside brackets, [], separated by commas:
+                </p>
+                <p class="code">
+                    <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">array</span> <span style="color: #f92672">=</span> <span style="color: #f92672">[</span><span style="color: #e6db74">&quot;duck&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;duck&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;goose&quot;</span><span style="color: #f92672">]</span>
+                    </pre></div>
+                </p>
+                <p>Here we have an Array of strings. What if we want to make it say, "duck duck goose"? Let's try <strong>puts</strong>:</p>
+                <p class="code">
 <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">array</span>
 
 <span style="color: #f8f8f2">duck</span>
@@ -73,50 +87,50 @@
 <span style="color: #f92672">=&gt;</span> <span style="color: #66d9ef">nil</span>
 </pre></div>
 
-				</p>
-				<p>So it looks like we can get it to display each of the elements our array down a list! What if we want to go through this twice, so we can say "duck duck goose duck duck goose" ? Let's use <strong>print</strong> to make it appear on the same line. We can also use a little trick here by multiplying our array by 2:
-				</p>           
-				<p class="code">
+                </p>
+                <p>So it looks like we can get it to display each of the elements our array down a list! What if we want to go through this twice, so we can say "duck duck goose duck duck goose" ? Let's use <strong>print</strong> to make it appear on the same line. We can also use a little trick here by multiplying our array by 2:
+                </p>           
+                <p class="code">
 <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">array</span><span style="color: #f92672">*</span><span style="color: #ae81ff">2</span>
 
 <span style="color: #f8f8f2">duckduckgooseduckduckgoose</span>
 <span style="color: #f92672">=&gt;</span> <span style="color: #66d9ef">nil</span>
 </pre></div>
-				</p>
-				<p>Yikes! That's not how we want it to look. Now, we can use a method called <strong>each</strong> to add spaces in between (actually, there are tons of ways to do this!), but let's look at how we can achieve this with cycle!</p>
-				<p>What exactly does cycle do? It will run through and do <em>something</em> to each element <em>n</em> number of times. Let's see what this looks like if we want to run through our array twice and <strong>print</strong> the result.</p>
-				<p class="code">
+                </p>
+                <p>Yikes! That's not how we want it to look. Now, we can use a method called <strong>each</strong> to add spaces in between (actually, there are tons of ways to do this!), but let's look at how we can achieve this with cycle!</p>
+                <p>What exactly does cycle do? It will run through and do <em>something</em> to each element <em>n</em> number of times. Let's see what this looks like if we want to run through our array twice and <strong>print</strong> the result.</p>
+                <p class="code">
 <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">array</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cycle(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><span style="color: #f92672">|</span><span style="color: #f8f8f2">animal</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">animal}</span>
 
 <span style="color: #f8f8f2">duckduckgooseduckduckgoose</span>
 <span style="color: #f92672">=&gt;</span> <span style="color: #66d9ef">nil</span>
 </pre></div>
-				</p>
-				<p>You can see here we specify the number of times we want to cycle through, with <strong>(2)</strong>. 
-				<strong>|animal|</strong> is where we decide what to call each element we are referring to, and <strong>print animal</strong> is our command we are telling it to do for every element</p>
-				<p>Now let's tell it to add a space after every time we print the element:</p>
-				<p class="code">
+                </p>
+                <p>You can see here we specify the number of times we want to cycle through, with <strong>(2)</strong>. 
+                <strong>|animal|</strong> is where we decide what to call each element we are referring to, and <strong>print animal</strong> is our command we are telling it to do for every element</p>
+                <p>Now let's tell it to add a space after every time we print the element:</p>
+                <p class="code">
 <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">array</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cycle(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><span style="color: #f92672">|</span><span style="color: #f8f8f2">animal</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">animal</span><span style="color: #f92672">+</span><span style="color: #e6db74">&quot; &quot;</span><span style="color: #f8f8f2">}</span>
 
 <span style="color: #f8f8f2">duck</span> <span style="color: #f8f8f2">duck</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">duck</span> <span style="color: #f8f8f2">duck</span> <span style="color: #f8f8f2">goose</span> 
 <span style="color: #f92672">=&gt;</span> <span style="color: #66d9ef">nil</span>
 </pre></div>
-				</p>
+                </p>
 
-				<p>Looking good! But wait, we can do even more within cycle! What if we want it to print only "goose"? Here we just add an <strong>if statement</strong>. Let's keep cycling until we have 20 geese!! Remember, one cycle has 2 elements of "goose", so we run this 10 times:
-				</p>
-				<p>
+                <p>Looking good! But wait, we can do even more within cycle! What if we want it to print only "goose"? Here we just add an <strong>if statement</strong>. Let's keep cycling until we have 20 geese!! Remember, one cycle has 2 elements of "goose", so we run this 10 times:
+                </p>
+                <p>
 <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">array</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cycle(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><span style="color: #f92672">|</span><span style="color: #f8f8f2">animal</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">animal</span><span style="color: #f92672">+</span><span style="color: #e6db74">&quot; &quot;</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">animal</span><span style="color: #f92672">==</span><span style="color: #e6db74">&quot;goose&quot;</span><span style="color: #f8f8f2">}</span>
 
 <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> <span style="color: #f8f8f2">goose</span> 
 <span style="color: #f92672">=&gt;</span> <span style="color: #66d9ef">nil</span>
 </pre></div>
-				</p>
+                </p>
 
 
 
-				<p>Voila! I count 10 geese in total. Remember, <strong>cycle</strong> allows us to run through some <em>n</em> number of times while allowing us the flexibility of telling it exactly how and what to do for every element in our array. Oh, and cycle works with other things too!</p>
-				<p class="code">
+                <p>Voila! I count 10 geese in total. Remember, <strong>cycle</strong> allows us to run through some <em>n</em> number of times while allowing us the flexibility of telling it exactly how and what to do for every element in our array. Oh, and cycle works with other things too!</p>
+                <p class="code">
 <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">question</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;what?&quot;</span>
 
 <span style="color: #f8f8f2">question</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cycle(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><span style="color: #f92672">|</span><span style="color: #f8f8f2">x</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">x}</span>
@@ -125,18 +139,86 @@
 <span style="color: #f92672">=&gt;</span> <span style="color: #66d9ef">nil</span>
 </pre></div>
 </p>
-				</h3>
-            	
+                    
 
+                    <hr>
+                </article>
             </div>
-        </div> 
+                <div class="col-md-3">
+    <!-- Subscribe to my feed widget -->
+        <div class="well text-center">
+            <button class="btn btn-primary btn-md">Subscribe to my feed</button>
+        </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Latest Posts</h4>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="c8-conflict.html">Emotional Conflicts</a></li>
+                        <li class="list-group-item"><a href="t8-tech.html">SQL Injection</a></li>
+                        <li class="list-group-item"><a href="t7-JavaScript.html">Ruby vs. JavaScript</a></li>
+                    </ul>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Categories</h4>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">Technical</a></li>
+                        <li class="list-group-item"><a href="#">Cultural</a></li>
+                        <li class="list-group-item"><a href="#">Personal</a></li>
+                    </ul>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Categories</h4>
+                    </div>
+                </div>
+                 
+                <!--Recent Comment Section
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Recent Comments</h4>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">I don't believe in astrology but still your writing style is really great! - <em>john</em></a></li>
+                        <li class="list-group-item"><a href="#">Wow.. what you said is really true! I'm an aries though - <em>Anto</em></a></li>
+                        <li class="list-group-item"><a href="#">Does capricorn and aries is compatibile? - <em>Sarah</em></a></li>
+                        <li class="list-group-item"><a href="#">I'm a cancer woman been in love with Leo. Will this work? - <em>Mary</em></a></li>
+                    </ul>
+                </div> -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Tags</h4>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-inline">
+                            <li><a href="#">Ruby</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">SQL</a></li>
+                            <li><a href="#">Culture</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
     </div>
 
-    <div id="footer"></div>
-        
-            
-  
-  </body>
-</html>
-    
 
+    <footer>
+        <div class="container">
+            <hr />
+            <p class="text-center">Copyright © Joseph Won 2014. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

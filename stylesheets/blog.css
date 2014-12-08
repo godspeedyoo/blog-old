@@ -1,0 +1,55 @@
+body {
+	margin-top: 75px;
+	margin: 15px;
+}
+
+footer {
+		margin: 10px 0;
+}
+
+#comments li {
+		list-style: none;
+}
+#comments, #comments li {
+		margin: 0px;
+		padding: 0px;
+}
+ 
+.photo {
+    margin-bottom: 10px;
+}
+
+.panel-default > .panel-heading
+{
+    color: #fff; /*white*/
+    background-color: #c43e3e; /*red*/
+    border-color: #872525; /*dark red*/
+}
+
+.img-container {
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+}
+
+.img-container-small {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
+
+.img-container img {width: 100%;}
+.img-container-small img {width: 100%;}
+
+.lead {
+	font-size: 1.3em;
+}
+
+.date-header {
+	color: gray;
+	font-size: .5em;
+}
+
+pre {
+
+}

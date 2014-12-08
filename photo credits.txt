@@ -1,0 +1,48 @@
+creative.jpg
+
+Photo credit: <a href="https://www.flickr.com/photos/nattu/895220635/">nattu</a> / <a href="http://foter.com/">Foter</a> / <a href="http://creativecommons.org/licenses/by/2.0/">CC BY</a>
+
+
+stereotype.jpg
+
+Photo credit: <a href="http://blog.shankbone.org">David Shankbone</a> / <a href="http://foter.com">Foter</a> / <a href="http://creativecommons.org/licenses/by/3.0/">CC BY</a>
+
+class.jpg
+
+Photo credit: <a href="https://www.flickr.com/photos/69125796@N00/7420992630/">starmanseries</a> / <a href="http://foter.com">Foter</a> / <a href="http://creativecommons.org/licenses/by/2.0/">CC BY</a>
+
+data.jpg
+
+Photo credit: <a href="https://www.flickr.com/photos/rh2ox/9990016123/">r2hox</a> / <a href="http://foter.com">Foter</a> / <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA</a>
+
+design.jpg
+
+Photo credit: <a href="https://www.flickr.com/photos/schoeband/2734066419/">schoeband</a> / <a href="http://foter.com">Foter</a> / <a href="http://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC</a>
+
+git.jpg
+
+Photo credit: <a href="https://www.flickr.com/photos/39043363@N03/3591165477/">joepage1</a> / <a href="http://foter.com">Foter</a> / <a href="http://creativecommons.org/licenses/by-nd/2.0/">CC BY-ND</a>
+
+
+values.jpg
+Photo credit: <a href="https://www.flickr.com/photos/mrezafaisal/6268129336/">M Reza Faisal</a> / <a href="http://foter.com/">Foter</a> / <a href="http://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND</a>
+
+pair.jpg
+
+Photo credit: <a href="https://www.flickr.com/photos/esti/4638056301/">esti-</a> / <a href="http://foter.com">Foter</a> / <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA</a>
+
+diversity.jpg
+
+Photo credit: <a href="https://www.flickr.com/photos/inkyhack/4560030528/">Inkyhack</a> / <a href="http://foter.com">Foter</a> / <a href="http://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC</a>
+
+thinking.jpg
+
+Photo credit: <a href="https://www.flickr.com/photos/hape_gera/2123257808/">HaPe_Gera</a> / <a href="http://foter.com/">Foter</a> / <a href="http://creativecommons.org/licenses/by/2.0/">CC BY</a>
+
+kitchen.jpg
+
+Photo credit: <a href="https://www.flickr.com/photos/chalonuk/6198297772/">ChalonHandmade</a> / <a href="http://foter.com/">Foter</a> / <a href="http://creativecommons.org/licenses/by/2.0/">CC BY</a>
+
+redesign.jpg
+
+Photo credit: <a href="https://www.flickr.com/photos/dystopos/315312589/">Dystopos</a> / <a href="http://foter.com/">Foter</a> / <a href="http://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC</a>

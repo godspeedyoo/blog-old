@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A learning web developer's blog">
+	<meta name="author" content="Joseph Won">
+	<title>Home</title>
+
+	<!-- Bootstrap CSS file -->
+	<link href="../bootstrap-3.3.1-dist\dist\css\bootstrap.min.css" rel="stylesheet" />
+	<link href="../bootstrap-3.3.1-dist\dist\css\bootstrap-theme.css" rel="stylesheet" />
+	<link href="../stylesheets/blog.css" rel="stylesheet" />
+</head>
+
+ 
+<body>
+
+		<!-- Jquery and Bootstrap Script files -->
+	<script src="jquery-2.1.1.min.js"></script>
+	<script src="bootstrap-3.3.1-dist\dist\js\bootstrap.min.js"></script>
+
+		<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">         
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand">Joseph Won</a>
+				</div>
+				<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+					<form class="navbar-form navbar-right" role="search">
+					  <div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					  </div>
+					  <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="../index.html">Home</a></li>
+						<li><a href="../archive.html">Archive</a></li>
+						<li><a href="../contact.html">Contact</a></li>
+						<li><a href="../about.html">About</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+	<br>
+	<br>
+	<br>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 col-lg-7 col-md-offset-1 col-lg-offset-1">
+				<article>
+					<h2><a href="t9-blog-design.html">Website Redesign</a><span class="pull-right">Dec 7th</span></h2>
+					<div class="row">
+						<div class="group1 col-sm-6 col-md-6">
+							<span class="glyphicon glyphicon-folder-open"></span>  <a href="#">Technical</a>
+							  <span class="glyphicon glyphicon-bookmark"></span> <a href="#">HTML CSS Bootstrap Design</a>
+						</div>
+						<!--<div class="group2 col-sm-6 col-md-6">
+							<span class="glyphicon glyphicon-pencil"></span> <a href="singlepost.html#comments">0 Comments</a>
+							  <span class="glyphicon glyphicon-time"></span> Insert Time here
+						</div> -->
+					</div>
+					<hr>
+					<img class="img-container" src="img/redesign.jpg" class="img-responsive">
+					Photo credit: <a href="https://www.flickr.com/photos/dystopos/315312589/">Dystopos</a> / <a href="http://foter.com/">Foter</a> / <a href="http://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC</a>
+					<br>
+					<br>
+					<h3>Bootstrap</h3>
+					<p>After doing some research, I chose to go ahead and implement bootstrap on my blog. Judging by the new technologies to learn and the setup time, I reserved a good chunk of time to go through this and learn how to set it up. Overall, I'm quite pleased with the results, although I think it did take longer than anticipated. Setting up bootstrap and trying to understand what it does took quite a bit of time, and I'm still learning bits and pieces at a time.</p>
+
+					<p>Once you have the files set up, you can implement bootstrap by applying many of its provided classes to your HTML. All of the fancy CSS is already compiled, and what you end up with is a library to use many cool classes and helper classes that make life easy for web design. One thing I picked up on here was applying many combinations of classes to a single HTML tag. Having specific classes defined for its unique purpose allows you to flexibly use and apply many combinations of things, such as "btn" and "pull-right" classes to specify a button that you wish to be placed on the right side.</p>
+
+
+					<h3>Bootstrap Grids</h3>
+					<p>One of the big concepts I picked up on was the use of grids. Imagine this page separated into 12 distinct columns, and you can use column numbers to specify how much space you want things to take. Working with numbers 1-12 is much easier than using precise pixels. You can find a guide full of examples <a href="http://getbootstrap.com/examples/grid/">here</a>.</p>
+
+					<h3>Design</h3>
+					<p>One of the most powerful things about bootstrap is its ability to make something look pretty with relative ease. Imagine writing your own css to create this button.</p>
+
+					<button class="btn btn-default">Click Me</button>
+
+					<p>Not only does it have built in gradient shading but it comes with the click and hover design. Having generic things like buttons already built in and coded helps us focus on other things, as these can be reused and tweaked to customize our own look and feel.</p>
+
+					<p>As I merely implement a very standard and template like look, I plan to update the site with more customization as I mess with my own variables and color schemes. It's merely a matter of time, and I've almost run out. DBC Phase 1 will begin tomorrow!</p>
+
+
+					<hr>
+				</article>
+			</div>
+				<div class="col-md-3">
+	<!-- Subscribe to my feed widget -->
+		<div class="well text-center">
+			<button class="btn btn-primary btn-md">Subscribe to my feed</button>
+		</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Latest Posts</h4>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="c8-conflict.html">Emotional Conflicts</a></li>
+						<li class="list-group-item"><a href="t8-tech.html">SQL Injection</a></li>
+						<li class="list-group-item"><a href="t7-JavaScript.html">Ruby vs. JavaScript</a></li>
+					</ul>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Categories</h4>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="#">Technical</a></li>
+						<li class="list-group-item"><a href="#">Cultural</a></li>
+						<li class="list-group-item"><a href="#">Personal</a></li>
+					</ul>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Categories</h4>
+					</div>
+				</div>
+				 
+				<!--Recent Comment Section
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Recent Comments</h4>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="#">I don't believe in astrology but still your writing style is really great! - <em>john</em></a></li>
+						<li class="list-group-item"><a href="#">Wow.. what you said is really true! I'm an aries though - <em>Anto</em></a></li>
+						<li class="list-group-item"><a href="#">Does capricorn and aries is compatibile? - <em>Sarah</em></a></li>
+						<li class="list-group-item"><a href="#">I'm a cancer woman been in love with Leo. Will this work? - <em>Mary</em></a></li>
+					</ul>
+				</div> -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Tags</h4>
+					</div>
+					<div class="panel-body">
+						<ul class="list-inline">
+							<li><a href="#">Ruby</a></li>
+							<li><a href="#">JavaScript</a></li>
+							<li><a href="#">HTML</a></li>
+							<li><a href="#">CSS</a></li>
+							<li><a href="#">SQL</a></li>
+							<li><a href="#">Culture</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		</div>
+	</div>
+
+
+	<footer>
+		<div class="container">
+			<hr />
+			<p class="text-center">Copyright © Joseph Won 2014. All rights reserved.</p>
+		</div>
+	</footer>
+
+
+</body>
+</html>

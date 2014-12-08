@@ -1,67 +1,81 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css"/>
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic' rel='stylesheet' type='text/css'>
-    <title>
-    Joseph Won's Blog
-    </title>
-  </head>
+<html lang="en">
+<head>    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A learning web developer's blog">
+  <meta name="author" content="Joseph Won">
+  <title>Home</title>
 
-  <body>
-    <div id="header">
-        <a href="../index.html"><div class="heading">Joseph<span>Won</span></div></a>
-    </div>
-    <div id="navtop">
+  <!-- Bootstrap CSS file -->
+  <link href="../bootstrap-3.3.1-dist\dist\css\bootstrap.min.css" rel="stylesheet" />
+  <link href="../bootstrap-3.3.1-dist\dist\css\bootstrap-theme.css" rel="stylesheet" />
+  <link href="../stylesheets/blog.css" rel="stylesheet" />
+</head>
 
-    </div>
+ 
+<body>
 
-    <div id="navblog">
-        <h1>Technical Blogs</h1>
-        <ul>
-            <li><a href="t1-git-blog.html">1-Git?</a></li>
-            <li><a href="t2-css-design.html">2-CSS Design</a></li>
-            <li><a href="t3-arrays-hashes.html">3-Arrays & Hashes</a></li>
-            <li><a href="t4-enumerable-cycle.html">4-Enumerable#cycle</a></li>
-            <li><a href="t5-ruby-classes.html">5-Classes</a></li>
-            <li><a href="t6-oop-concepts.html">6-Blocks, Procs, Lambdas</a></li>
-            <li><a href="t7-JavaScript.html">7-JavaScript</a></li>
-            <li><a href="t8-tech.html">8-SQL Injection</a></li>
-        </ul>
-        <h1>Cultural Blogs</h1>
-        <ul>
-            <li><a href="c1-chefs-kitchen.html">1-The Kitchen</a></li>
-            <li><a href="c3_thinking-style.html">3-Concrete Random Learner</a></li>
-            <li><a href="c4-tech-issues.html">4-Tech Issues</a></li>
-            <li><a href="c5-feedback.html">5-Feedback</a></li>
-            <li><a href="c6-stereotype-threat.html">6-Stereotype Threat</a></li>
-            <li><a href="c7-values.html">7-Values</a></li>
-            <li><a href="c8-conflict.html">8-Conflict</a></li>
-            <li><a href="../gps1-2.html">GPS 1.2-Pair Programming</a></li>
-        </ul>
-    </div>
+    <!-- Jquery and Bootstrap Script files -->
+  <script src="jquery-2.1.1.min.js"></script>
+  <script src="bootstrap-3.3.1-dist\dist\js\bootstrap.min.js"></script>
 
-    <div id="container">
-       
-        <div id="main">
-            <div id="mainheader">
-                <div><i class="ribbon"><i><span>Nov<span>8</span></span></i>
-                </i>
-
-                </div>
-
-                <div id="mainline"></div>
-                <div id="title">
-                    <h1>Ruby: Classes</h1>
-                </div>
-                    
+    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">         
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="index.html" class="navbar-brand">Joseph Won</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
             </div>
-            <div id="post">
-            						<h3><p>When I first started diving into Ruby, I often heard of the terms "classes", "objects", and "instances". I knew that in object oriented programming, just about everything can be considered an object, but I had no concrete definition of what an object is when writing code, and what it can do. In an attempt to demystify the concept of the Class as well as tools such as the instance variable and instance method in Ruby, let's take a closer look at what an object is.
-				</p>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="../index.html">Home</a></li>
+            <li><a href="../archive.html">Archive</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  <br>
+  <br>
+  <br>
 
-				<p>Suppose we are writing a program that will display your collection of video game consoles. We know that we will be dealing with game consoles, and will have to display different information for each one such as the manufacturer, the number of controllers supported, the year it was released, etc. We can think of this console as an object, or a thing that can have different properties. Now, anyone not exposed to class design might jump at the opportunity and start to translate these into variables: </p>
-				
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-lg-7 col-md-offset-1 col-lg-offset-1">
+        <article>
+          <h2><a href="t5-ruby-classes.html">Ruby Classes</a><span class="pull-right">Nov 8th</span></h2>
+          <div class="row">
+            <div class="group1 col-sm-6 col-md-6">
+              <span class="glyphicon glyphicon-folder-open"></span>  <a href="#">Technical</a>
+                <span class="glyphicon glyphicon-bookmark"></span> <a href="#">Ruby</a>
+            </div>
+            <!--<div class="group2 col-sm-6 col-md-6">
+              <span class="glyphicon glyphicon-pencil"></span> <a href="singlepost.html#comments">0 Comments</a>
+                <span class="glyphicon glyphicon-time"></span> Insert Time here
+            </div> -->
+          </div>
+          <hr>
+          <img class="img-container" src="img/class.jpg" class="img-responsive">
+          Photo credit: <a href="https://www.flickr.com/photos/therefromhere/518053737/">therefromhere</a> / <a href="http://foter.com/">Foter</a> / <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA</a>
+          <br>
+          <br>
+<p>When I first started diving into Ruby, I often heard of the terms "classes", "objects", and "instances". I knew that in object oriented programming, just about everything can be considered an object, but I had no concrete definition of what an object is when writing code, and what it can do. In an attempt to demystify the concept of the Class as well as tools such as the instance variable and instance method in Ruby, let's take a closer look at what an object is.
+        </p>
+
+        <p>Suppose we are writing a program that will display your collection of video game consoles. We know that we will be dealing with game consoles, and will have to display different information for each one such as the manufacturer, the number of controllers supported, the year it was released, etc. We can think of this console as an object, or a thing that can have different properties. Now, anyone not exposed to class design might jump at the opportunity and start to translate these into variables: </p>
+        
 <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">console_1_name</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;xbox&quot;</span>
 <span style="color: #f8f8f2">console_1_year</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">2001</span>
 <span style="color: #f8f8f2">coneole_1_controllers</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">4</span>
@@ -70,8 +84,8 @@
 <span style="color: #f8f8f2">console_2_year</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">2000</span>
 <span style="color: #f8f8f2">coneole_2_controllers</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">2</span>
 </pre></div>
-				
-				<p>Now, you can quickly see how if we were talking about types of clothing, or cars, that we will end up with a plethora of separate variable names that point to each <em>object</em> we want to reference. This is where the power of the object in object oriented programming comes in, and to define what an object is, we need to think in terms of a class. Take a look at the variables and you'll notice they all have one thing in common: "console" is in the name of each of these variables. Let's define our console class. Think of our class as a template that defines what properties they will have upon their creation and what type of behaviors they will able to do at that particular time.</p>
+        
+        <p>Now, you can quickly see how if we were talking about types of clothing, or cars, that we will end up with a plethora of separate variable names that point to each <em>object</em> we want to reference. This is where the power of the object in object oriented programming comes in, and to define what an object is, we need to think in terms of a class. Take a look at the variables and you'll notice they all have one thing in common: "console" is in the name of each of these variables. Let's define our console class. Think of our class as a template that defines what properties they will have upon their creation and what type of behaviors they will able to do at that particular time.</p>
 
 <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Console</span>
 
@@ -83,12 +97,12 @@
     <span style="color: #f8f8f2">@controllers</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">controllers</span>
 
   <span style="color: #66d9ef">end</span>
-	
+  
 <span style="color: #66d9ef">end</span>
 </pre></div>
 
 
-				<p>Here, we've defined our Console class which can spawn our objects. The initialize method you see here is allowing us to pass in the name, manufacturer, year, and controllers as arguments to describe what our new object will be like. We call this object it will create as an <em>instance of class Console</em>. </p>
+        <p>Here, we've defined our Console class which can spawn our objects. The initialize method you see here is allowing us to pass in the name, manufacturer, year, and controllers as arguments to describe what our new object will be like. We call this object it will create as an <em>instance of class Console</em>. </p>
 
 <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">xbox</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">Console</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new(</span><span style="color: #e6db74">&quot;Xbox&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;Microsoft&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">2001</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">4</span><span style="color: #f8f8f2">)</span>
 
@@ -101,9 +115,9 @@
 
 
 
-				<p>You might be wondering how we can have one defined set of variables of @name, @year, etc. but have multiple objects, each with its own properties. That is because these are instance variables, denoted by the '@' symbol, which designates that a name property only belongs to an instance of the class Console. In other words, a Console does not have a name, manufacturer, and year, but an instance of Console does! This is an important distinction.</p>
+        <p>You might be wondering how we can have one defined set of variables of @name, @year, etc. but have multiple objects, each with its own properties. That is because these are instance variables, denoted by the '@' symbol, which designates that a name property only belongs to an instance of the class Console. In other words, a Console does not have a name, manufacturer, and year, but an instance of Console does! This is an important distinction.</p>
 
-				<p>Now that we stored a few properties of our object using instance variables, we can define some behavior using instance methods! Let's write a method that simply outputs the properties we want. There is a shortcut to this using attr_reader method, but let's write it out so we can see what is happening.</p>
+        <p>Now that we stored a few properties of our object using instance variables, we can define some behavior using instance methods! Let's write a method that simply outputs the properties we want. There is a shortcut to this using attr_reader method, but let's write it out so we can see what is happening.</p>
 
 <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Console</span>
 
@@ -135,7 +149,7 @@
 <span style="color: #66d9ef">end</span>
 </pre></div>
 
-				<p> We've created a method to return the @name when we call the name method. Same for the others. Let's see it in action:</p>
+        <p> We've created a method to return the @name when we call the name method. Same for the others. Let's see it in action:</p>
 
 <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">xbox</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">name</span>
 
@@ -153,19 +167,89 @@
 
 <span style="color: #f92672">=&gt;</span> <span style="color: #ae81ff">4</span>
 </pre></div>
-				<p>When we type in xbox.name, the name method gets <em>called</em> on to the xbox object, which already has its own instance variable of @name which stored "xbox". This is how our objects can contain its own unique properties while still belonging to a more generalized class. It's helpful to think of the object as just "one example of", or "type of" Console.</p>
-				</h3>
+        <p>When we type in xbox.name, the name method gets <em>called</em> on to the xbox object, which already has its own instance variable of @name which stored "xbox". This is how our objects can contain its own unique properties while still belonging to a more generalized class. It's helpful to think of the object as just "one example of", or "type of" Console.</p>
+        </h3>
 
+          
 
-            </div>
-        </div> 
+          <hr>
+        </article>
+      </div>
+        <div class="col-md-3">
+  <!-- Subscribe to my feed widget -->
+    <div class="well text-center">
+      <button class="btn btn-primary btn-md">Subscribe to my feed</button>
     </div>
 
-    <div id="footer"></div>
-        
-            
-  
-  </body>
-</html>
-    
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>Latest Posts</h4>
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="c8-conflict.html">Emotional Conflicts</a></li>
+            <li class="list-group-item"><a href="t8-tech.html">SQL Injection</a></li>
+            <li class="list-group-item"><a href="t7-JavaScript.html">Ruby vs. JavaScript</a></li>
+          </ul>
+        </div>
 
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>Categories</h4>
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="#">Technical</a></li>
+            <li class="list-group-item"><a href="#">Cultural</a></li>
+            <li class="list-group-item"><a href="#">Personal</a></li>
+          </ul>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>Categories</h4>
+          </div>
+        </div>
+         
+        <!--Recent Comment Section
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>Recent Comments</h4>
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="#">I don't believe in astrology but still your writing style is really great! - <em>john</em></a></li>
+            <li class="list-group-item"><a href="#">Wow.. what you said is really true! I'm an aries though - <em>Anto</em></a></li>
+            <li class="list-group-item"><a href="#">Does capricorn and aries is compatibile? - <em>Sarah</em></a></li>
+            <li class="list-group-item"><a href="#">I'm a cancer woman been in love with Leo. Will this work? - <em>Mary</em></a></li>
+          </ul>
+        </div> -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>Tags</h4>
+          </div>
+          <div class="panel-body">
+            <ul class="list-inline">
+              <li><a href="#">Ruby</a></li>
+              <li><a href="#">JavaScript</a></li>
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">SQL</a></li>
+              <li><a href="#">Culture</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="container">
+      <hr />
+      <p class="text-center">Copyright © Joseph Won 2014. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>

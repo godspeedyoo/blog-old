@@ -1,58 +1,222 @@
-<html><head>
-    <link type="text/css" rel="stylesheet" href="stylesheets/index-stylesheet.css">
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Quattrocento+Sans:400,700" rel="stylesheet" type="text/css">
-    <title>
-    Joseph Won
-    </title>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A learning web developer's blog">
+	<meta name="author" content="Joseph Won">
+	<title>Home</title>
 
-  <body>
-  
-    <div id="header">
-        <h1>Joseph<span>Won</span></h1>
-    </div>
-    <div id="navmenu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-           <!--  <li><a href="projects.html">Projects</a></li> -->
-            <li><a href="blog/t1-git-blog.html">Git?</a></li>
-            <li><a href="blog/t2-css-design.html">CSS Design</a></li>
-            <li><a href="blog/t3-arrays-hashes.html">Arrays & Hashes</a></li>
-            <li><a href="blog/t4-enumerable-cycle.html">Enumerable#cycle</a></li>
-            <li><a href="blog/t5-ruby-classes.html">Classes</a></li>
-            <li><a href="blog/c1-chefs-kitchen.html">The Kitchen</a></li>
-            <li><a href="blog/c3_thinking-style.html">Concrete Random Learner</a></li>
-            <li><a href="blog/c4-tech-issues.html">Tech Issues</a></li>
-            <li><a href="blog/c5-feedback.html">Feedback</a></li>
-            <li><a href="blog/t6-oop-concepts.html">Blocks, Procs, Lambdas</a></li>
-            <li><a href="blog/c6-stereotype-threat.html">Stereotype Threat</a></li>
-            <li><a href="blog/t7-JavaScript.html">JavaScript</a></li>
-            <li><a href="blog/t8-tech.html">SQL Injection</a></li>
-            <li><a href="blog/c8-conflict.html">Emotional Conflicts</a></li>
-            <li><a href="cheatsheet.html">DBC Cheatsheet: Ruby vs JS Loops</a></li>
-            
-		<li><a href="gps1-2.html">Pair Programming (from the 90s!)</a></li>
-      </ul>
-    </div>
+	<!-- Bootstrap CSS file -->
+	<link href="bootstrap-3.3.1-dist\dist\css\bootstrap.min.css" rel="stylesheet" />
+	<link href="bootstrap-3.3.1-dist\dist\css\bootstrap-theme.css" rel="stylesheet" />
+	<link href="stylesheets/blog.css" rel="stylesheet" />
+</head>
 
-     
-    <br>
-     
-    <div id="keyboard">
-    <img src="blog/img/keyboard.png">
-    <div id="redsection"><p class="intro">Hi, my name is Joseph Won and I'm an aspiring web developer.</p>
-    </div><div id="yellowsection"><p class="intro">I am currently a student at<br><em>Dev Bootcamp</em></p></div></div>
-    
-   
+ 
+<body>
+
+		<!-- Jquery and Bootstrap Script files -->
+	<script src="jquery-2.1.1.min.js"></script>
+	<script src="bootstrap-3.3.1-dist\dist\js\bootstrap.min.js"></script>
+
+		<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">         
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand">Joseph Won</a>
+				</div>
+				<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+					<form class="navbar-form navbar-right" role="search">
+					  <div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					  </div>
+					  <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="archive.html">Archive</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+	<br>
+	<br>
+	<br>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-lg-8">
+	 
+				<!-- heading -->
+				<h1>Latest Posts</h1>
+	 
+				<!-- list of posts -->
+
+				<article>
+					<h2><a href="singlepost.html">Emotional Conflicts</a><span class="pull-right">Nov 30th</span></h2>
+
+					<div class="row">
+						<div class="group1 col-sm-6 col-md-6">
+							<span class="glyphicon glyphicon-folder-open"></span>  <a href="#">Cultural</a>
+							  <span class="glyphicon glyphicon-bookmark"></span> <a href="#">SQL</a>
+						</div>
+						<!--<div class="group2 col-sm-6 col-md-6">
+							<span class="glyphicon glyphicon-pencil"></span> <a class="pull-right" href="singlepost.html#comments">0 Comments</a>
+							  <span class="glyphicon glyphicon-time"></span>Insert Time here
+						</div> -->
+					</div>
+					<hr>
+					<img class="img-container" src="blog/img/upset.jpg" class="img-responsive">
+					Photo credit: <a href="https://www.flickr.com/photos/therefromhere/518053737/">therefromhere</a> / <a href="http://foter.com/">Foter</a> / <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA</a>
+					<br>
+					<br>
+					<p class="lead">It was just another afternoon at the office, and I had been working on some design changes to make to our database system. I was approached by a coworker asking if I had made any changes to our revenue recognition system within the last two days. After asking what was wrong and how it could have happened, I replied several times...</p>
+					<p class="text-right">
+						<a href="singlepost.html">
+							continue reading...
+						</a>
+					</p>
+					<hr>
+				</article>
+
+				<article>
+					<h2><a href="singlepost.html">SQL Injection</a><span class="pull-right">Nov 28th</span></h2>
+					<div class="row">
+						<div class="group1 col-sm-6 col-md-6">
+							<span class="glyphicon glyphicon-folder-open"></span>  <a href="#">Technical</a>
+							  <span class="glyphicon glyphicon-bookmark"></span> <a href="#">SQL</a>
+						</div>
+						<!--<div class="group2 col-sm-6 col-md-6">
+							<span class="glyphicon glyphicon-pencil"></span> <a href="singlepost.html#comments">0 Comments</a>
+							  <span class="glyphicon glyphicon-time"></span> Insert Time here
+						</div> -->
+					</div>
+					<hr>
+					<img class="img-container" src="https://farm1.staticflickr.com/224/518053737_8a9794389e_b.jpg" class="img-responsive">
+					Photo credit: <a href="https://www.flickr.com/photos/therefromhere/518053737/">therefromhere</a> / <a href="http://foter.com/">Foter</a> / <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA</a>
+					<br>
+					<br>
+					<p class="lead">SQL injection is one of the most common types of attacks against data driven web applications. This type of attack takes advantage of user input fields to embed pieces of SQL commands that tricks the SQL query to doing what the attacker wants to do.</p>
+					<p class="text-right">
+						<a href="singlepost.html">
+							continue reading...
+						</a>
+					</p>
+					<hr>
+				</article>
+
+				<article>
+				
+					<h2><a href="singlepost.html">Ruby Hashes vs. JavaScript Objects</a><span class="pull-right">Nov 21st</span></h2>
+					<div class="row">
+						<div class="group1 col-sm-6 col-md-6">
+							<span class="glyphicon glyphicon-folder-open"></span>  <a href="#">Technical</a>
+							  <span class="glyphicon glyphicon-bookmark"></span> <a href="#">SQL</a>
+						</div>
+						<!--<div class="group2 col-sm-6 col-md-6">
+							<span class="glyphicon glyphicon-pencil"></span> <a href="singlepost.html#comments">0 Comments</a>
+							  <span class="glyphicon glyphicon-time"></span>Insert Time here
+						</div> -->
+					</div>
+					<hr>
+					<img class="img-container" src="blog/img/js.jpg" class="img-responsive">
+					Photo credit: <a href="https://www.flickr.com/photos/dmitry-baranovskiy/2378867408/">Dmitry Baranovskiy</a> / <a href="http://foter.com/">Foter</a> / <a href="http://creativecommons.org/licenses/by/2.0/">CC BY</a>
+					<br>
+					<br>
+					<p class="lead">In Ruby, hashes are types of objects (of the class Hash) that contain data in pairs. Each pair is made up of a key and a value. Keys are unique, and both keys and values can be referenced. You can be flexible with the type of data you can store, such as Strings, Integers, Arrays, and even other Hashes...</p>
+					<p class="text-right">
+						<a href="singlepost.html">
+							continue reading...
+						</a>
+					</p>
+					<hr>				
+				</article>
+
+	 
+				<!-- pager -->
+				<ul class="pager"> 
+					<li class="previous">
+						<a href="#">← Older</a>
+					</li> 
+					<li class="next">
+						<a href="#">Newer →</a>
+					</li> 
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<!-- Subscribe to my feed widget -->
+				<div class="well text-center">
+					<button class="btn btn-primary btn-lg">Subscribe to my feed</button>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Latest Posts</h4>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="c8-conflict.html">Emotional Conflicts</a></li>
+						<li class="list-group-item"><a href="t8-tech.html">SQL Injection</a></li>
+						<li class="list-group-item"><a href="t7-JavaScript.html">Ruby vs. JavaScript</a></li>
+					</ul>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Categories</h4>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="#">Technical</a></li>
+						<li class="list-group-item"><a href="#">Cultural</a></li>
+						<li class="list-group-item"><a href="#">Personal</a></li>
+					</ul>
+				</div>
+				 
+				<!--Recent Comment Section
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Recent Comments</h4>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="#">I don't believe in astrology but still your writing style is really great! - <em>john</em></a></li>
+						<li class="list-group-item"><a href="#">Wow.. what you said is really true! I'm an aries though - <em>Anto</em></a></li>
+						<li class="list-group-item"><a href="#">Does capricorn and aries is compatibile? - <em>Sarah</em></a></li>
+						<li class="list-group-item"><a href="#">I'm a cancer woman been in love with Leo. Will this work? - <em>Mary</em></a></li>
+					</ul>
+				</div> -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Tags</h4>
+					</div>
+					<div class="panel-body">
+						<ul class="list-inline">
+							<li><a href="#">Ruby</a></li>
+							<li><a href="#">JavaScript</a></li>
+							<li><a href="#">HTML</a></li>
+							<li><a href="#">CSS</a></li>
+							<li><a href="#">SQL</a></li>
+							<li><a href="#">Culture</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<hr />
+			<p class="text-center">Copyright © Joseph Won 2014. All rights reserved.</p>
+		</div>
+	</footer>
 
 
- <!--    <div id="footer">
-      <p>Contact me:</p>
-    </div>
-   -->
-  
-  
-
-  
-
-</body></html>
+</body>
+</html>
